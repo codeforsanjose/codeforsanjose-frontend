@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="projectsCtrl"> 
+
+<ul ng-repeat="project in projects| orderBy:'last_updated'">
+  <li>{{project.name}}</li>
+  <li>Description: {{project.description}}</li> 
+  <li>Status: {{project.status}}</li>
+  <li>Languages: {{project.languages}}</li>
+  <li>Source: {{project.code_url}}</li>
+  <li>Last Updated: {{project.last_updated}}</li>  
+</ul>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('projectsCtrl', function($scope, $http) {
+  $http.get("http://codeforamerica.org/api/organizations/Code-for-San-Jose/projects?per_page=999")
+  .success(function (response) {$scope.projects = response.objects;});
+});
+</script>
+
+</body>
+</html>
