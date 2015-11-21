@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="ui.bootstrap.demo">
+<head>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+  <div ng-controller="projectsCtrl" class="container">
+    <div class="row">
+    <uib-tabset vertical="true" class="tabs-left">
+      <uib-tab ng-repeat="project in projects" heading="{{project.name}}" active="tab.active" disable="tab.disabled">
+        <ul class="{{project.id}} content-list" >
+    		  <li class="name"><h3>{{project.name}}</h3></li>
+    		  <li class="description">Description: {{project.description}}</li> 
+    		  <li class="status">Status: {{project.status}}</li>
+    		  <li class="languages">Languages: {{project.languages}}</li>
+    		  <li class="code_url">Source: {{project.code_url}}</li>
+    		  <li class="last-updated">Last Updated: {{project.last_updated}}</li>  
+  		  </ul>
+      </uib-tab>
+    </uib-tabset>
+    </div>
+  </div>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+  <script src="js/ui-bootstrap-tpls-0.14.3.min.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
