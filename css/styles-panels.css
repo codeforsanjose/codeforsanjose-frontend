@@ -1,0 +1,22 @@
+.photo-code {
+  background: url("images/code.jpg") no-repeat;
+  width: 40px;
+  color: red; }
+
+.photo-theater {
+  background: url("images/theater.jpg") no-repeat;
+  width: 40px;
+  color: red; }
+
+.photo-music {
+  background: url("images/music.jpg") no-repeat;
+  width: 40px;
+  color: red; }
+
+.photo-design {
+  background: url("images/design.jpg") no-repeat;
+  width: 40px;
+  color: red; }
+
+.photo-co {
+  color: red; }

@@ -1,0 +1,110 @@
+@import "overide-styles";
+
+@import "menuanimation";
+@import "homepage";
+
+
+.ng-cloak{ display:none}
+
+ul{list-style: none;}
+
+.content-list{padding-top: 100px;}
+
+.container, .navbar{margin:0; padding:0; width:100%}
+
+
+/* NAVIGATION BAR RULES ARE HERE! */
+
+$navbar-bg: 	rgba(6,26,38,0.9); 
+$navbar-color:	white;
+$nav-icon:		#555;
+
+.nav-area{width:120px; z-index: 2; position: absolute; float:right; top: 0; right: 0; height:100%;
+ }
+
+.content-area{float:left}
+
+.navbar{
+	@media (min-width: 800px){
+		height:100%;
+	};
+	z-index: 2;
+	background-color: $navbar-bg;
+	box-shadow: 1px 0px 2px 2px rgba(0,0,0,0.3);
+	border: 0;
+	border-radius: 0;
+	color: $navbar-color;
+	.nav-ul{
+		padding-top: 100px;
+		font-size: 15px;
+	}
+	.container-fluid{
+		padding:0;
+	}
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: $navbar-color;
+}
+
+/* Overiding default css properties for navigation active, focus, and hover */
+// .navbar-default .navbar-nav>.active>a, 
+// .navbar-default .navbar-nav>.active>a:focus, 
+// .navbar-default .navbar-nav>.active>a:hover{
+// 	background-color: $navbar-bg; 
+// 	border-radius: 50%; 
+// 	border:3px solid $nav-icon; 
+// 	padding:5px
+// }
+
+.nav-contactInfo{padding-top:550px; font-size: 14px; text-align:center}
+.nav-info-box{
+	background-color: $navbar-bg;
+	width: 250px; 
+	height:250px;
+	position:relative;
+	top:100px; right:215px; z-index:10;
+	border-radius: 2%;
+}
+
+.navbar{
+a i:hover, a i:active, a i.fa {
+	display: block;
+    height: 29px;
+    width: 29px;
+    font-size: 13px;
+    // margin-left: -14px;
+    text-align: center;
+    line-height: 29px;
+    color: #D72436;
+    // border: 2px solid red;
+    border-radius: 50%;
+    background-color: #93d8ff;
+    margin-bottom: 10px
+}
+
+a{    display: inline-block;
+    padding: 48px 25px 16px 25px;
+    text-decoration: none;
+    color: #93d8ff;
+    // height: 80px;}
+}
+}
+
+.navbar {
+	ul {width:100%;
+	li{padding: 0 10px}
+}
+
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+background-color:none;	// color:D72436;
+	// border-radius: 50%; 
+	// border:3px solid $nav-icon; 
+	// padding:5px
+
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{background-color: none !important}
+

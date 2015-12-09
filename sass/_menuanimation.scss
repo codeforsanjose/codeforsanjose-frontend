@@ -1,0 +1,27 @@
+.smart-object{
+	position: fixed;
+    transform-style: flat;
+    backface-visibility: hidden;
+    transform: translate3d(40px, 40px, 0px);
+    z-index: 5;
+    top: 0px;
+    left: 0px;
+}
+
+.desktop-menu{
+	width: 45px;
+    height: 45px;
+    border-radius: 23px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+
+    .fa{
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 45px;
+    min-width: 45px;
+    height: 45px;
+    text-align: center;
+    }
+}
+

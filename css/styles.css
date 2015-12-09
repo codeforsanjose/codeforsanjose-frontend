@@ -90,8 +90,160 @@
   border-color: #ddd #ddd #ddd transparent;
   *border-left-color: #ffffff; }
 
+.smart-object {
+  position: fixed;
+  transform-style: flat;
+  backface-visibility: hidden;
+  transform: translate3d(40px, 40px, 0px);
+  z-index: 5;
+  top: 0px;
+  left: 0px; }
+
+.desktop-menu {
+  width: 45px;
+  height: 45px;
+  border-radius: 23px;
+  position: absolute;
+  background-color: white; }
+  .desktop-menu .fa {
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 45px;
+    min-width: 45px;
+    height: 45px;
+    text-align: center; }
+
+.home-container {
+  background: url("../images/codeforsanjose.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  filter: grayscale(1);
+  transition-property: filter;
+  transition-duration: 1s;
+  width: 100%;
+  filter: grayscale(1);
+  transition-property: filter;
+  transition-duration: 1s;
+  z-index: 0; }
+  .home-container .row {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: rgba(86, 214, 249, 0.4); }
+  .home-container .col-lg-12 {
+    padding: 0; }
+  .home-container .info-box {
+    width: 600px;
+    margin: 100px;
+    font-size: 15px;
+    background-color: rgba(86, 214, 249, 0.7);
+    color: white;
+    padding: 50px; }
+  .home-container .down-arrow {
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+    width: 33px;
+    height: 33px;
+    line-height: 33px;
+    border-radius: 50%;
+    background-color: #A3A3A3;
+    text-align: center;
+    font-size: 16px; }
+
+.index-row {
+  height: 100vh;
+  margin: 0; }
+
+.ng-cloak {
+  display: none; }
+
 ul {
   list-style: none; }
 
 .content-list {
   padding-top: 100px; }
+
+.container, .navbar {
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+
+/* NAVIGATION BAR RULES ARE HERE! */
+.nav-area {
+  width: 120px;
+  z-index: 2;
+  position: absolute;
+  float: right;
+  top: 0;
+  right: 0;
+  height: 100%; }
+
+.content-area {
+  float: left; }
+
+.navbar {
+  z-index: 2;
+  background-color: rgba(6, 26, 38, 0.9);
+  box-shadow: 1px 0px 2px 2px rgba(0, 0, 0, 0.3);
+  border: 0;
+  border-radius: 0;
+  color: white; }
+  @media (min-width: 800px) {
+    .navbar {
+      height: 100%; } }
+  .navbar .nav-ul {
+    padding-top: 100px;
+    font-size: 15px; }
+  .navbar .container-fluid {
+    padding: 0; }
+
+.navbar-default .navbar-nav > li > a {
+  color: white; }
+
+/* Overiding default css properties for navigation active, focus, and hover */
+.nav-contactInfo {
+  padding-top: 550px;
+  font-size: 14px;
+  text-align: center; }
+
+.nav-info-box {
+  background-color: rgba(6, 26, 38, 0.9);
+  width: 250px;
+  height: 250px;
+  position: relative;
+  top: 100px;
+  right: 215px;
+  z-index: 10;
+  border-radius: 2%; }
+
+.navbar a i:hover, .navbar a i:active, .navbar a i.fa {
+  display: block;
+  height: 29px;
+  width: 29px;
+  font-size: 13px;
+  text-align: center;
+  line-height: 29px;
+  color: #D72436;
+  border-radius: 50%;
+  background-color: #93d8ff;
+  margin-bottom: 10px; }
+
+.navbar a {
+  display: inline-block;
+  padding: 48px 25px 16px 25px;
+  text-decoration: none;
+  color: #93d8ff; }
+
+.navbar ul {
+  width: 100%; }
+  .navbar ul li {
+    padding: 0 10px; }
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+  background-color: none; }
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+  background-color: none !important; }

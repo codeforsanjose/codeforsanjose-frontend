@@ -1,0 +1,18 @@
+
+<div ng-controller="projectsCtrl" class="container">
+  <div class="row">
+  <uib-tabset vertical="true" class="tabs-left">
+    <uib-tab ng-repeat="project in projects" heading="{{project.name}}" active="tab.active" disable="tab.disabled">
+      <ul class="{{project.id}} content-list" >
+  		  <li class="name"><h3>{{project.name}}</h3></li>
+  		  <li class="description">Description: {{project.description}}</li> 
+  		  <li class="status">Status: {{project.status}}</li>
+  		  <li class="languages">Languages: {{project.languages}}</li>
+  		  <li class="code_url">Source: {{project.code_url}}</li>
+  		  <li class="last-updated">Last Updated: {{project.last_updated}}</li>  
+		  </ul>
+    </uib-tab>
+  </uib-tabset>
+  </div>
+</div>
+

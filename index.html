@@ -1,28 +1,80 @@
 <!DOCTYPE html>
 <html>
-<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-<body>
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+	    <meta name="author" content="anusuya roy choudhury">
+		<title>Code for San Jose Website</title>
+		
+<!-- 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+ -->		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
 
-<div ng-app="myApp" ng-controller="projectsCtrl"> 
+		
+		<link rel="stylesheet" type="text/css" href="bower_components/fontawesome/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/boostrapoveride.css">
 
-<ul ng-repeat="project in projects| orderBy:'last_updated'">
-  <li>{{project.name}}</li>
-  <li>Description: {{project.description}}</li> 
-  <li>Status: {{project.status}}</li>
-  <li>Languages: {{project.languages}}</li>
-  <li>Source: {{project.code_url}}</li>
-  <li>Last Updated: {{project.last_updated}}</li>  
-</ul>
+	
+	</head>
+	<body>
+		<div class="container index-container" ng-app="myapp" style="height:100%">
+			<div class="row index-row">
 
-</div>
+				<div class="nav-area">
+					<header ng-include="'templates/nav.html'" style="height:100%"></header>
+				</div>
+				
+				<div class="col-sm-12 content-area" style="padding:0;">
+					<div class="main">
+						<div ui-view=""></div>
+					</div>
+				</div>
+				
+				
 
-<script>
-var app = angular.module('myApp', []);
-app.controller('projectsCtrl', function($scope, $http) {
-  $http.get("http://codeforamerica.org/api/organizations/Code-for-San-Jose/projects?per_page=999")
-  .success(function (response) {$scope.projects = response.objects;});
-});
-</script>
+				<div class="smart-object">
+					<div class="desktop-menu">
+						<i class="fa fa-bars fa-2x"></i>
+						<span class="toggle-menu"></span>
+					</div>
+				</div>
+				
+			</div>
 
-</body>
+		</div>
+	</body>
+
+		
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+  	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+  	<script src="js/ui-bootstrap-tpls-0.14.3.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<!--<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>-->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>	
+	<script type="text/javascript">
+	 $(document).ready(function () {
+        $(".navbar-nav li.trigger-collapse a").click(function(event) {
+          $(".navbar-collapse").collapse('hide');
+        });
+      });
+	</script>
+	<script type="text/javascript">
+		function fancyRide(l, fares) {
+  var cars = ["UberX", "UberXL", "UberPlus", "UberBlack", "UberSUV"],
+      answer;
+      fares = [0.3, 0.5, 0.7, 1, 1.3]
+  for (var i = 1; i < 5; i++) {
+    if (fares[i] * l <= 20) {
+      answer = cars[i];
+    }
+  }
+  return answer;
+}
+console.log(fancyRide(1,20))
+	</script>
 </html>
