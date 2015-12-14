@@ -1,0 +1,84 @@
+/* 
+Because we all need some Sass in our lives. And in our codes.
+--------------------------------------------------------------------------------- 
+This code will subtly (or not so subtly) generate different colors for background.
+This code will also do some animations for header. 
+*/
+
+
+ @mixin animation($name, $duration, $timing, $direction, $iteration){
+	animation-name: $name;
+	animation-duration: $duration;
+	animation-timing-function: $timing;
+	animation-direction: $direction;
+	animation-iteration-count: $iteration;
+}
+
+@mixin keyframes($animationName) {
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+
+// Color Changer Animation: Color Variables. Pick your poison! 
+
+$color0: transparentize(#DFDFDF,0.4);
+
+$colors: #8bc5d1, #b4cd84, #bdb280, #fadc84, #d1988b, #987bb5, #d1d18b, #8bd1b9, #8bc5d1, #DFDFDF; //#d1988b
+
+// $colors: transparentize($colors,0.5);
+
+// $colors:transparentize($color,0.4)
+
+// Creates an animation that changes background color iterating through the colors array above. 
+// Additionally uses Sass's native color function which lightens a color for a pastel look
+
+@include keyframes(changecolours) {
+	0% {background-color: lighten($color0,5%)}
+	@for $i from 1 through length($colors){
+		transparentize:($colors,0.4);
+		#{$i}0% {background-color: lighten(nth($colors, $i),5%) }
+	}	 
+}
+// transparentize($color, $amount)
+
+
+// Arrow Bounce Animation: 
+
+@include keyframes(bounceDown){
+	0% {
+		transform:translateY(0%);
+	}
+
+	50% {
+		transform:translateY(30%);
+	}
+
+	100%{
+		transform:translateY(0%);
+
+	}
+}
+
+//Animation Arrow Hover:
+
+@include keyframes(arrowHover){
+
+}
+
+.home-container .row{
+	@include animation(changecolours, 20s, ease, alternate, infinite) //normal
+}
+
+.fa-arrow-down{
+	@include animation(bounceDown, 5s, ease, alternate, infinite )
+}
+.down-arrow*:before{
+transition: 0.25s ease-in-out;
+    transition-property: initial;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+    transition-delay: initial;
+}
+

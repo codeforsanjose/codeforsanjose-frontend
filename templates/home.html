@@ -1,17 +1,26 @@
-<div class="home-container container">
-	<div class="row panel">
+<div class="home-container container" ng-controller="homeCtrl">
+	<div class="row panel {{panels[current].panelclass}}">
 		<div class="col-sm-12">
 			<div class="panel-filter">
 				<div class="info-box">
-					<div class="up-arrow"></div>
-					<h1>About</h1>
-					<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
+					<div class="blurred">
+						<div class="up-arrow">
+							<i class="fa fa-arrow-up"></i>
+<!-- 							<p>></p>
+ -->					</div>
+						<h1>{{panels[current].title}}</h1>
+						<p>{{panels[current].description}}</p>
+						<a href=""> Round Button - Read More...</a>
+						<p>{{panels[current].modescription}}</p>
+						<div class="down-arrow" ng-click="likesOne()">
+							<i class="fa fa-arrow-down"></i>
+<!-- 							<p>></p>
+ -->					</div>
+ <span class="left srow">\</span><span class="right srow">/</span>
+ 						
+<div class="arrow-down"></div>
 
-					<a href=""> Round Button - Read More...</a>
-
-					<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000</p>
-
-					<div class="down-arrow"><i class="fa fa-arrow-down"></i></div>
+					</div>
 				</div>
 			</div>
 		</div>

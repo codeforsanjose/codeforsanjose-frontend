@@ -5,3 +5,22 @@ app.controller('projectsCtrl', function ($scope, $http, $window) {
  .success(function (response) {$scope.projects = response.objects;});
 });
 
+app.controller('homeCtrl', function($scope){
+
+$scope.panel=[
+{
+	title:"About",
+	description:"jkjkjkjl",
+	modescription:"sjahhsjakhkj",
+	panelclass:"panel--about",
+},
+{
+	title:"Projects",
+	description:"ywqtytuyw",
+	modescription:"jwjakll",
+	panelclass:"panel--projects",
+
+}
+];
+
+})

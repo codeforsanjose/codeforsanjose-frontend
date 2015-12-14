@@ -1,4 +1,5 @@
-@mixin backImage($image, $height:100vh){
+
+@mixin backImage($image, $height:100vh){	
 	background: url($image);
 	background-repeat:no-repeat;
 	background-position: center center;
@@ -11,29 +12,83 @@
 }
 
 .home-container{
-	@include backImage('../images/codeforsanjose.jpg');
+
+	@include backImage('../images/DSCF124555.jpg');
 	filter: grayscale(1);
 	transition-property: filter;
 	transition-duration: 1s;
 	z-index: 0;
 	
-	.row{width:100%; height:100%; margin:0; background-color: rgba(86, 214, 249, 0.4)}
-	.col-lg-12{padding:0}
+	.row{
+		width:100%; 
+		height:100%; 
+		margin:0; 
+		background-color: rgba(86, 214, 249, 0.4)
+	}
 
-	.info-box{width: 600px; margin: 100px; font-size: 15px; background-color:rgba(86, 214, 249, 0.7);color:white; padding:50px} //background-color:rgba(205,92,92, 0.9); 
+	.col-lg-12{
+		padding:0
+	}
 
+	.info-box{
+		width: 600px; 
+		height:540px;
+		margin: 100px 100px 0 100px; 
+		font-size: 15px;
+		// linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("https://lh3.googleusercontent.com/-m8TxQMObg6c/U474EWu7Y9I/AAAAAAAAI2k/xkRGoIEC1iU/s1600/blur.jpg") 
+		// background-color:rgba(86, 21, 249, 0.8);
+		// background-image: url('http://silverspaceship.com/static/shot_1.png');
+		// background-color: rgba(86, 214, 249, 0.2);
+		color:white; 
+		
+		.blurred {
+			width:100%; height:100%;
+
+			background-color:rgba(86, 214, 249, 0.9);
+			padding:50px; 
+		}
+		// background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../images/DSCF124555.jpg");
+		background-size: cover;
+		background-attachment: fixed;
+	} 
+	//background-color:rgba(205,92,92, 0.9); 
+	// .panel--projects .info-box{width: 600px; margin: 100px; font-size: 15px; background-color:rgba(86, 214, 249, 0.9);color:red; padding:50px} //background-color:rgba(205,92,92, 0.9); 
+
+
+	.arrow-standard-style{
+		cursor: pointer;
+	    z-index: 10;
+	    width: 33px;
+	    height: 33px;
+		line-height: 33px; 
+		border-radius: 50%; 
+		// background-color: #A3A3A3; 
+		text-align:center; 
+		font-size: 16px; 
+	}
 	.down-arrow{    
-	position: absolute;
-    cursor: pointer;
-    z-index: 10;
-    width: 33px;
-    height: 33px;
-	line-height: 33px; border-radius: 50%; background-color: #A3A3A3; text-align:center; font-size: 16px}
+	    @extend .arrow-standard-style;
+	    position:absolute;
+	    bottom: 100px;
+	    left:120px;
+	    // transform:rotate(45deg);
+
+	}
+
+	.up-arrow{
+		@extend .arrow-standard-style;
+		// transform:rotate(45deg);
+		position:absolute;
+	    top: 100px;
+	    left:120px;
+
+	}
 
 }
 
-.index-row{height:100vh; margin:0}
+.index-row{
+	height:100vh; 
+	margin:0
+}
 
-//168,200,201, 0.9)
 
-// .img-logo{width:60px; height:60px; display:none}

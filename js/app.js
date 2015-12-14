@@ -17,27 +17,40 @@ app.config(['$urlRouterProvider','$stateProvider', function($urlRouterProvider, 
 		});
 }]);
 
-app.controller('projectsCtrl', function ($scope, $http, $window) {
- $http.get("http://codeforamerica.org/api/organizations/Code-for-San-Jose/projects?per_page=999")
- .success(function (response) {$scope.projects = response.objects;});
-});
+
+/* Home Page Controller --- Controller for information box on homepage. 
+Dynamically generates the next panel's JSON object with arrow click. */
 
 app.controller('homeCtrl', function($scope){
 
-$scope.panel=[
-{
-	title:"About",
-	description:"jkjkjkjl",
-	modescription:"sjahhsjakhkj",
-	panelclass:"panel--about",
-},
-{
-	title:"Projects",
-	description:"ywqtytuyw",
-	modescription:"jwjakll",
-	panelclass:"panel--projects",
+	$scope.panels=[
+		{
+			title:"About",
+			description:"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
+			modescription:"Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum",
+			panelclass:"panel--about",
+		},
+		{
+			title:"Projects",
+			description:"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from andom text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 y",
+			modescription:"ular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Rich",
+			panelclass:"panel--projects",
 
-}
-];
+		}
+	];
 
-})
+	$scope.current=0;
+
+	$scope.likesOne=function(){
+		$scope.current=($scope.current + 1) % $scope.panels.length;
+	};
+
+});
+
+
+app.controller('projectsCtrl', function ($scope, $http, $window) {
+
+	$http.get("http://codeforamerica.org/api/organizations/Code-for-San-Jose/projects?per_page=999")
+	.success(function (response) {$scope.projects = response.objects;});
+
+});
