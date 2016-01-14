@@ -1,10 +1,10 @@
 {
   "name": "Projects-Github",
   "version": "0.0.1",
-  "description": "Testing Code for Angular Projects Page that is to be added to CFSJ",
+  "description": "Code for Angular Project that is to be added to CFSJ",
   "repository": {
     "type": "git",
-    "url": "https://github.com/arc6789/Projects-Github"
+    "url": "https://github.com/arc6789/Angular-Project"
   },
   "author": "Anusuya Choudhury",
   "devDependencies": {
@@ -15,8 +15,6 @@
     "gulp-ruby-sass": "^1.0.5",
     "gulp-sass": "^2.1.0",
     "gulp-sourcemaps": "^1.5.2",
-    "gulp-webserver": "^0.9.1",
-    
   }
 }
 

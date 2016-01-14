@@ -3,34 +3,30 @@
 This repo contains AngularJS frontend code for Website project for Code For San Jose. To access backend code developed in Rails click on the following url: 
 
 Tools Used:
-AngularJS
-SASS(.scss)
-Node/npm
-GULP
-Bower
+AngularJS, SASS(.scss), Node/npm, GULP, Bower
+
+Node/npm needs to be installed before following any directions below.
 
 ## Instructions to set up:
 
-To set this project up and get it running in your browser:
+To set this project up and get it running in your browser you will need a local server. Run these commands:
 
-1) Clone this repo
-2) npm init
+`npm init`
+`npm install http-server -g`
+`http-server` 
 
 
 ## Instructions to develop with this code:
 
-/* ----------- Non-Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-}
+This project is using SASS and it will require a SASS compiler. If you followed the instructions above then you have your node dependencies required which includes Gulp as a task runner. Take a closer look at gulpfile.js.
+
+To compile .scss files and watch for changes run:
+
+`gulp sass-and-watch`
+
+* Note do not edit any sass compiled css files. Any changes you make may be overidden. 
 
 
-/* ----------- Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-}
+
+
+
