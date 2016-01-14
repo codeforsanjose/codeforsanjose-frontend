@@ -3,13 +3,33 @@
 @import "menuanimation";
 @import "homepage";
 
-body{display:none}
-.ng-cloak{ display:none}
+/*html, body{    max-height: 100%;
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;}*/
+/* html{overflow-y:scroll;}
+*//*body{display:none}
+*/.ng-cloak{ display:none}
 
 ul{list-style: none;}
-
+/*body{height:700px}
+*/
 .content-list{padding-top: 100px;}
 
 .container, .navbar{margin:0; padding:0; width:100%}
 
+.top-border,
+.left-border,
+.bottom-border,
+.right-border{padding:10px;}
 
+.top-border{top: 0px; width:100%;position:fixed;z-index:10; background-color:white;height: 10px}
+.left-border{left:0px;height:100%; position:fixed;z-index:10; background-color:white;width: 10px}
+.bottom-border{bottom:0;width:100%;position:fixed; z-index:10; background-color:white;height:10px}
+.right-border{right:0;height:100%;position:fixed;z-index:10; background-color:white; width:10px}
+
+/* Projects Page */
+.nav-stacked{overflow-y: scroll; height:600px;overflow-x:hidden;}
+.navbar a i:hover, .navbar a i:active, .navbar a i.fa{display:inline-block;}

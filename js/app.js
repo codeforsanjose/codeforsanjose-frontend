@@ -1,4 +1,5 @@
-var app = angular.module('myapp',['ui.router']);
+
+var app = angular.module('myapp',['ui.router','ngAnimate','ui.bootstrap']);
 
 app.config(['$urlRouterProvider','$stateProvider', function($urlRouterProvider, $stateProvider){
 	$urlRouterProvider.otherwise('/');
@@ -48,9 +49,23 @@ app.controller('homeCtrl', function($scope){
 });
 
 
+/* Projects Page Controller --- Uses angular's native ajax method. */
+
 app.controller('projectsCtrl', function ($scope, $http, $window) {
 
 	$http.get("http://codeforamerica.org/api/organizations/Code-for-San-Jose/projects?per_page=999")
 	.success(function (response) {$scope.projects = response.objects;});
 
+});
+
+
+
+
+app.controller('formCtrl',function($scope){
+
+	$scope.fullName = "John";
+    $scope.email = "Doe";
+    $scope.fullName = function() {
+        return $scope.firstName + " " + $scope.lastName;
+    };
 });

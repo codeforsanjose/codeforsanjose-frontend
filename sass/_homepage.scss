@@ -1,5 +1,5 @@
 
-@mixin backImage($image, $height:100vh){	
+@mixin backImage($image, $height:100%){	
 	background: url($image);
 	background-repeat:no-repeat;
 	background-position: center center;
@@ -13,7 +13,7 @@
 
 .home-container{
 
-	@include backImage('../images/DSCF124555.jpg');
+	@include backImage('../images/DSCF1245.jpg');
 	filter: grayscale(1);
 	transition-property: filter;
 	transition-duration: 1s;
@@ -33,9 +33,9 @@
 	.info-box{
 		width: 600px; 
 		height:540px;
-		margin: 100px 100px 0 100px; 
+		margin: 10px 100px 0 100px; 
 		font-size: 15px;
-		// linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("https://lh3.googleusercontent.com/-m8TxQMObg6c/U474EWu7Y9I/AAAAAAAAI2k/xkRGoIEC1iU/s1600/blur.jpg") 
+		 linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)); 
 		// background-color:rgba(86, 21, 249, 0.8);
 		// background-image: url('http://silverspaceship.com/static/shot_1.png');
 		// background-color: rgba(86, 214, 249, 0.2);
@@ -87,7 +87,7 @@
 }
 
 .index-row{
-	height:100vh; 
+	height:100%; 
 	margin:0
 }
 

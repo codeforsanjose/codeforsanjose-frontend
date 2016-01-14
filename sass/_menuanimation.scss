@@ -23,12 +23,13 @@ $icon-hov-color:    white;
 
 
 .nav-area{
-    width:120px; 
+    // width:120px; 
     z-index: 2; 
-    position: absolute; 
+    position: relative; 
     float:right; top: 0; 
     right: 0; 
     height:100%;
+    // background-color: $navbar-bg;
  }
 
 .content-area{float:left}
@@ -39,7 +40,7 @@ $icon-hov-color:    white;
     };
     z-index: 2;
     background-color: $navbar-bg;
-    box-shadow: 1px 0px 2px 2px rgba(0,0,0,0.3);
+    // box-shadow: 1px 0px 2px 2px rgba(0,0,0,0.3);
     border: 0;
     border-radius: 0;
     color: $navbar-color;
@@ -67,6 +68,7 @@ $icon-hov-color:    white;
 //  padding:5px
 // }
 
+.navbar-icons{text-align:center;margin:15%;}
 .nav-contactInfo{
     padding-top:550px; 
     font-size: 14px; 
@@ -110,7 +112,7 @@ $icon-hov-color:    white;
 
 .navbar {
     ul {
-    width:100%;
+    width:100%; text-align:center;
         li{
             padding: 0 10px
         }
@@ -155,18 +157,5 @@ background-color:none;  // color:D72436;
     }
 }
 
-/* ----------- Non-Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-}
 
-/* ----------- Retina Screens ----------- */
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-}
 
