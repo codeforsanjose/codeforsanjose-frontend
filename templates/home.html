@@ -12,18 +12,23 @@
 			<div class="panel-filter">
 				<div class="info-box">
 					<div class="blurred">
-						<div class="up-arrow">
-							<i class="fa fa-arrow-up"></i>
+						<div class="active cfsj-logo" ui-sref-active="active">
+	         				<a href="#" style="padding:0">
+	            			<img class="img-logo" style="width:100px" src="images/c4sjlogo.jpg">
+	          			</a>
+	        		</div>
+					<div class="up-arrow" ng-click="random()">
+						<i class="fa fa-arrow-up"></i>
 <!-- 							<p>></p>
- -->					</div>
-						<h1>{{panels[current].title}}</h1>
-						<p>{{panels[current].description}}</p>
-						<a href=""> Round Button - Read More...</a>
-						<p>{{panels[current].modescription}}</p>
-						<div class="down-arrow" ng-click="likesOne()">
-							<i class="fa fa-arrow-down"></i>
+-->					</div>
+					<h1 id="slider">{{panels[current].title}}</h1>
+					<p>{{panels[current].description}}</p>
+					<a href=""> Round Button - Read More...</a>
+					<p>{{panels[current].modescription}}</p>
+					<div class="down-arrow" ng-click="likesOne()">
+						<i class="fa fa-arrow-down"></i>
 <!-- 							<p>></p>
- -->					</div>
+-->					</div>
 <!--  <span class="left srow">\</span><span class="right srow">/</span>
  						
 <div class="arrow-down"></div>

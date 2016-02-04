@@ -25,11 +25,12 @@ $icon-hov-color:    white;
 .nav-area{
     // width:120px; 
     z-index: 2; 
-    position: relative; 
-    float:right; top: 0; 
+/*    position: relative; 
+*/    float:right; top: 0; 
     right: 0; 
-    height:100%;
     // background-color: $navbar-bg;
+    position:absolute; 
+    width:14%;height:inherit
  }
 
 .content-area{float:left}
@@ -46,7 +47,7 @@ $icon-hov-color:    white;
     color: $navbar-color;
 
     .nav-ul{
-        padding-top: 100px;
+        margin: 20px auto 20px;
         font-size: 15px;
     }
     .container-fluid{
@@ -68,13 +69,6 @@ $icon-hov-color:    white;
 //  padding:5px
 // }
 
-.navbar-icons{text-align:center;margin:15%;}
-.nav-contactInfo{
-    padding-top:550px; 
-    font-size: 14px; 
-    text-align:center
-}
-
 .nav-info-box{
     background-color: $navbar-bg;
     width: 250px; 
@@ -84,22 +78,7 @@ $icon-hov-color:    white;
     border-radius: 2%;
 }
 
-.navbar{
-    a i:hover, a i:active, a i.fa {
-        display: block;
-        height: 29px;
-        width: 29px;
-        font-size: 13px;
-        // margin-left: -14px;
-        text-align: center;
-        line-height: 29px;
-        color: $nav-icon-color; //#9E0E1D
-        // border: 2px solid red;
-        border-radius: 50%;
-        background-color: $nav-icon-bg; //#1C96B3
-        margin-bottom: 10px
-    }
-
+.navbar .navbar-icons {
     a{    
         display: inline-block;
         padding: 48px 25px 16px 25px;
@@ -107,14 +86,22 @@ $icon-hov-color:    white;
         color: $nav-icon-bg;
         // height: 80px;}
     }
-
-}
-
-.navbar {
     ul {
     width:100%; text-align:center;
         li{
-            padding: 0 10px
+            width: 100%;
+            text-align: center;
+            padding: 0 10px;
+            font-size: 12px;
+            line-height: 1.5em;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            text-align: center;
+            font-family: Raleway;
+            a{
+                padding: 7px !important
+            }
         }
     }
 
@@ -157,5 +144,51 @@ background-color:none;  // color:D72436;
     }
 }
 
+/*.nav-contactInfo{
+    padding-top:550px; 
+    font-size: 14px; 
+    text-align:center
+}*/
 
+.nav-contactInf{
+
+    width: 90%;
+    height: 50px;
+    margin: 0 auto;
+    
+    ul li{
+        float:left;
+        padding: 2px; 
+        margin: 5px;
+        background-color: white;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        color: black;
+        text-align: center;
+        i{line-height: 21px; font-size: 15px; margin: 0; padding: 0; text-align: center; width: 100%}
+        a{text-decoration: none; color: black}
+    }
+
+    p a{
+        text-decoration: none;
+        color: white;
+        word-wrap:break-word;
+    }
+}
+
+
+.sign-up-button{text-align: center; padding: 5px; width: 20px; height: 10px;}
+
+@media only screen and (max-width: 992px){
+    .nav-area{
+        position: fixed;
+        height: auto;
+        /* width: 100%; */
+        top: 0;
+        bottom: auto;
+        overflow: visible;
+        width: 100%;
+    }
+}
 

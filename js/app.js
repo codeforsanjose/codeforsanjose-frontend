@@ -10,11 +10,23 @@ app.config(['$urlRouterProvider','$stateProvider', function($urlRouterProvider, 
 		})
 		.state('about', {
 			url:'/',
-			templateUrl: 'templates/about.html'
+			templateUrl:'templates/about.html'
 		})
 		.state('projects', {
 			url:'/',
 			templateUrl:'templates/projects.html'
+		})
+		.state('data', {
+			url:'/',
+			templateUrl:'templates/data.html'
+		})
+		.state('contact', {
+			url:'/',
+			templateUrl:'templates/contact.html'
+		})
+		.state('sign-up', {
+			url:'/',
+			templateUrl:'templates/sign-up.html'
 		});
 }]);
 
@@ -46,6 +58,14 @@ app.controller('homeCtrl', function($scope){
 		$scope.current=($scope.current + 1) % $scope.panels.length;
 	};
 
+	$scope.random=function(){
+		$(function () {
+            // wait till load event fires so all resources are available
+              $scope.$slider = $('#slider').css("color","red");
+              })
+    };
+	
+
 });
 
 
@@ -67,5 +87,16 @@ app.controller('formCtrl',function($scope){
     $scope.email = "Doe";
     $scope.fullName = function() {
         return $scope.firstName + " " + $scope.lastName;
+    };
+});
+
+App.directive('toolbarTip', function() {
+    return {
+        // Restrict it to be an attribute in this case
+        restrict: 'A',
+        // responsible for registering DOM listeners as well as updating the DOM
+        link: function(scope, element, attrs) {
+            $(element).toolbar(scope.$eval(attrs.toolbarTip));
+        }
     };
 });

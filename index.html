@@ -19,26 +19,29 @@
 		<div class="left-border"></div>
 		<div class="bottom-border"></div>
 		<div class="right-border"></div> -->
-		<div class="container index-container" style="width:100%;height:inherit;">
-			
-			<div class="row index-row">
-				<div class="nav-area" style="position:absolute; width:15%;height:700px">
+		<div class="container index-container" style="width:100%;overflow-x:hidden; height:800px">
+		
+				<!-- <div class="navbar-close-open" id="format-toolbar1" class="settings-button" toolbar-tip="{content: '#format-toolbar-options', position: 'top'}">
+          			<div class="" style="width:50px; height:50px; background-color:white; margin:20px; position:absolute; top:20px; right:20px; z-index:30"></div>
+        		</div> -->
+<!-- 			<div class="row index-row">
+ -->			<div class="nav-area" style="">
 					<header ng-include="'templates/nav.html'" style="height:inherit;"></header>
 				</div>				
-				<div class="content-area" style="padding:0; width:100%; height:700px; ">
+				<div class="content-area" style="padding:0; width:100%; height:100% ">
 <!-- 					<div class="main" style="height:inherit;">
  -->						<div ui-view="" style="height:inherit;"></div>
 					<!-- </div> -->
 				</div>
 				<!-- <div class="smart-object">
 					<div class="desktop-menu">
-						<i class="fa fa-bars fa-2x"></i>
-						<span class="toggle-menu"></span>
+						<img class="img-logo" style="width:100px;" src="images/c4sjlogo.jpg">
 					</div>
-				</div> -->				
-			</div>
-		</div>
+				</div>		 -->		
+<!-- 			</div>
+ -->		</div>
 		
+ 		<script type="text/javascript" src="js/controllers.js"></script>	
 
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
@@ -46,13 +49,13 @@
 	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<script type="text/javascript" src="js/ui-bootstrap-tpls-0.14.3.min.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>	
-	 <script type="text/javascript">
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript">
 	//  $(document).ready(function () {
  //        $(".navbar-nav li.trigger-collapse a").click(function(event) {
  //          $(".navbar-collapse").collapse('hide');
  //        });
  //      });
-	// </script>
+	//</script>
 </body>
 </html>
