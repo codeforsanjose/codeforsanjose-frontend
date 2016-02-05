@@ -22,7 +22,7 @@ ul{list-style: none;}
 
 
 $bheight:900px;
-body{height: $bheight}
+body{height: $bheight; overflow-x:hidden;}
 
 body{
 	@if $bheight > 700px {		

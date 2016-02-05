@@ -64,9 +64,20 @@ app.controller('homeCtrl', function($scope){
               $scope.$slider = $('#slider').css("color","red");
               })
     };
+
+   $scope.navClass=function(){
+	   $(function() {
+			
+				$('#nav-icon').toggleClass('open');
+				$('.nav-area').toggleClass('vanish')
+			
+		});
+	}
+
+	
+});
 	
 
-});
 
 
 /* Projects Page Controller --- Uses angular's native ajax method. */
