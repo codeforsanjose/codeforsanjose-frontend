@@ -19,7 +19,7 @@ To set this project up and get it running in your browser you will need a local 
 * `http-server` 
 
 
-## Instructions to develop with this code:
+Instructions to develop with this code:
 
 This project is using SASS and it will require a SASS compiler. If you followed the instructions above then you have your node dependencies required which includes Gulp as a task runner. Take a closer look at gulpfile.js.
 
