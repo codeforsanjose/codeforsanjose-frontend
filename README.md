@@ -1,15 +1,16 @@
-# Code For San Jose Website - FrontEnd
+# About the Code For San Jose Website - FrontEnd Project
 
 This repo contains AngularJS frontend code for Website project for Code For San Jose. To access backend code developed in Rails click on the following url: 
 https://github.com/codeforsanjose/codeforsanjose-backend
 
 
-Tools Used:
+## Languages
+
 AngularJS, SASS(.scss), Node/npm, GULP, Bower
 
 Node/npm needs to be installed before following any directions below.
 
-## Instructions to set up:
+## Installation
 
 To set this project up and get it running in your browser you will need a local server. Run these commands:
 
@@ -28,6 +29,13 @@ To compile .scss files and watch for changes run:
 
 Note do not edit any sass compiled css files. Any changes you make may be overidden. 
 
+## Administration
+
+Anasuya Choudary
+
+## Contributing
+
+Have anything to add? Fork this repository and open a pull request.
 
 
 
