@@ -97,13 +97,14 @@
 
 /* NAVIGATION BAR RULES ARE HERE. NAVIGATION ANIMATIONS HERE AS WELL. 
 CODE REFACTORING HAPPENS LATER. */
-.arrow-down {
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 20px solid #f00; }
-
+/*.arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    
+    border-top: 20px solid #f00;
+}*/
 .srow {
   font-size: 25px; }
 
@@ -131,11 +132,10 @@ CODE REFACTORING HAPPENS LATER. */
 .navbar {
   z-index: 2;
   background-color: rgba(6, 26, 38, 0.95);
+  box-shadow: 1px 0px 2px 2px rgba(0, 0, 0, 0.3);
   border: 0;
   border-radius: 0;
-  color: white;
-  /*    transition:width 2s;
-*/ }
+  color: white; }
   @media (min-width: 800px) {
     .navbar {
       height: 100%; } }
@@ -222,11 +222,6 @@ CODE REFACTORING HAPPENS LATER. */
     height: 45px;
     text-align: center; }
 
-/*.nav-contactInfo{
-    padding-top:550px; 
-    font-size: 14px; 
-    text-align:center
-}*/
 .nav-contactInf {
   width: 90%;
   height: 50px;
@@ -252,6 +247,10 @@ CODE REFACTORING HAPPENS LATER. */
     .nav-contactInf ul li a {
       text-decoration: none;
       color: black; }
+  .nav-contactInf ul li:hover {
+    background-color: #3F3F3F; }
+    .nav-contactInf ul li:hover a {
+      color: white; }
   .nav-contactInf p a {
     text-decoration: none;
     color: white;
@@ -292,7 +291,7 @@ CODE REFACTORING HAPPENS LATER. */
   position: absolute;
   height: 4px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.68);
+  background: rgba(79, 155, 191, 0.88);
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -390,16 +389,19 @@ CODE REFACTORING HAPPENS LATER. */
     width: 100%;
     height: 100%;
     margin: 0;
-    background-color: rgba(86, 214, 249, 0.4); }
+    background-color: rgba(86, 214, 249, 0.1); }
   .home-container .col-lg-12 {
     padding: 0; }
   .home-container .info-box {
-    width: 70%;
+    width: 80%;
     height: 80%;
-    margin: 60px 100px 0 60px;
+    margin: 30px;
     font-size: 15px;
     /*	linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)); 
 */
+    /*// background-color:rgba(86, 21, 249, 0.8);
+		// background-image: url('http://silverspaceship.com/static/shot_1.png');
+		// background-color: rgba(86, 214, 249, 0.2);*/
     color: black;
     background-size: cover;
     background-attachment: fixed; }
@@ -407,7 +409,7 @@ CODE REFACTORING HAPPENS LATER. */
       width: 100%;
       height: 100%;
       background-color: rgba(230, 238, 241, 0.8);
-      padding: 50px; }
+      padding: 30px; }
   .home-container .arrow-standard-style, .home-container .down-arrow, .home-container .up-arrow {
     cursor: pointer;
     z-index: 10;

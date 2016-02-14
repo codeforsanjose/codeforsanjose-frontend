@@ -13,12 +13,12 @@
 		<link rel="stylesheet" type="text/css" href="css/animations.css">
 		<link rel="stylesheet" type="text/css" href="css/stylestwo.css">
 	</head>
-	<body ng-controller="homeCtrl" >
+	<body ng-controller="homeCtrl" style="overflow-y:hidden">
 	<!-- 	<div class="top-border"></div> -->
 <!-- 		<div class="left-border"></div>
  -->	<!-- 	<div class="bottom-border"></div> -->
 <!-- 		<div class="right-border"></div>
- -->		<div class="container index-container" style="width:100%;overflow-x:hidden; height:800px">
+ -->		<div class="container index-container" style="width:100%;overflow-x:hidden;overflow-y:auto; height:100vh">
 				<div ng-click="navClass()" class="navbar-close-open">
           			<div id="nav-icon" style="z-index:30">
           				<span></span>
@@ -37,7 +37,7 @@
 				</div>
 			</div>
 
- 	// <script type="text/javascript" src="js/controllers.js"></script>	
+ 	<script type="text/javascript" src="js/controllers.js"></script>	
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 	<script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>

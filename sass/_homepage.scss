@@ -23,29 +23,30 @@
 		width:100%; 
 		height:100%; 
 		margin:0; 
-		background-color: rgba(86, 214, 249, 0.4)
+		background-color: rgba(86, 214, 249, 0.1)
 	}
+
 
 	.col-lg-12{
 		padding:0
 	}
 
 	.info-box{
-		width: 70%; 
+		width: 80%; 
 		height:80%;
-		margin: 60px 100px 0 60px; 
+		margin: 30px; 
 		font-size: 15px;
 /*	linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)); 
-*/		// background-color:rgba(86, 21, 249, 0.8);
+*/		/*// background-color:rgba(86, 21, 249, 0.8);
 		// background-image: url('http://silverspaceship.com/static/shot_1.png');
-		// background-color: rgba(86, 214, 249, 0.2);
+		// background-color: rgba(86, 214, 249, 0.2);*/
 		color:black; 
 		
 		.blurred {
 			width:100%; height:100%;
 
 			background-color:rgba(230, 238, 241, 0.8);
-			padding:50px; 
+			padding:30px; 
 		}
 		// background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../images/DSCF124555.jpg");
 		background-size: cover;

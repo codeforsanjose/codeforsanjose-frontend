@@ -21,16 +21,15 @@ This code will also do some animations for header.
 }
 
 
-// Color Changer Animation: Color Variables. Pick your poison! 
-
+/* Color Changer Animation: Color Variables. Pick your poison! 
+*/
 $color0: transparentize(#DFDFDF,0.4);
 
 $colors: #8bc5d1, #b4cd84, #bdb280, #fadc84, #d1988b, #987bb5, #d1d18b, #8bd1b9, #8bc5d1, #DFDFDF; //#d1988b
 
 // $colors: transparentize($colors,0.5);
-
-// $colors:transparentize($color,0.4)
-
+/* $colors:transparentize($color,0.4)
+*/
 // Creates an animation that changes background color iterating through the colors array above. 
 // Additionally uses Sass's native color function which lightens a color for a pastel look
 
@@ -44,8 +43,8 @@ $colors: #8bc5d1, #b4cd84, #bdb280, #fadc84, #d1988b, #987bb5, #d1d18b, #8bd1b9,
 // transparentize($color, $amount)
 
 
-// Arrow Bounce Animation: 
-
+/* Arrow Bounce Animation: 
+*/
 @include keyframes(bounceDown){
 	0% {
 		transform:translateY(0%);
@@ -61,8 +60,8 @@ $colors: #8bc5d1, #b4cd84, #bdb280, #fadc84, #d1988b, #987bb5, #d1d18b, #8bd1b9,
 	}
 }
 
-//Animation Arrow Hover:
-
+/*Animation Arrow Hover:
+*/
 @include keyframes(arrowHover){
 
 }

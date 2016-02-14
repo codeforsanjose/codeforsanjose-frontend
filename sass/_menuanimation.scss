@@ -8,14 +8,14 @@ $nav-icon-color:    #D72436;
 $icon-hov-bg:       white;
 $icon-hov-color:    white;
 
-.arrow-down {
+/*.arrow-down {
     width: 0; 
     height: 0; 
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     
     border-top: 20px solid #f00;
-}
+}*/
 
 .srow{font-size: 25px}
 .left{transform:rotate(-10deg)};
@@ -30,7 +30,7 @@ $icon-hov-color:    white;
     right: 0; 
     // background-color: $navbar-bg;
     position:absolute; 
-    width:14%;height:inherit;
+    width:14%; height: inherit;
     transition:0.5s;
  }
 
@@ -42,12 +42,11 @@ $icon-hov-color:    white;
     };
     z-index: 2;
     background-color: $navbar-bg;
-    // box-shadow: 1px 0px 2px 2px rgba(0,0,0,0.3);
+    box-shadow: 1px 0px 2px 2px rgba(0,0,0,0.3);
     border: 0;
     border-radius: 0;
     color: $navbar-color;
-/*    transition:width 2s;
-*/
+
     .nav-ul{
         margin: 20px auto 20px;
         font-size: 15px;
@@ -62,9 +61,7 @@ $icon-hov-color:    white;
     text-align:center; 
     padding-top:30px; 
     margin-top:60px;
-    .cfsj-logo{
-        margin: 20px auto 20px;
-    }
+    .cfsj-logo{margin: 20px auto 20px;}
     a{padding:0;}
     img{width:100px;}
 }
@@ -158,11 +155,6 @@ background-color:none;  // color:D72436;
     }
 }
 
-/*.nav-contactInfo{
-    padding-top:550px; 
-    font-size: 14px; 
-    text-align:center
-}*/
 
 .nav-contactInf{
 
@@ -183,7 +175,10 @@ background-color:none;  // color:D72436;
         text-align: center;
         i{line-height: 21px; font-size: 15px; margin: 0; padding: 0; text-align: center; width: 100%}
         a{text-decoration: none; color: black}
+
     }
+
+    ul li:hover{background-color:#3F3F3F; a{color:white;}}
 
     p a{
         text-decoration: none;
@@ -194,7 +189,6 @@ background-color:none;  // color:D72436;
 
 
 .sign-up-button{text-align: center; padding: 5px; width: 20px; height: 10px;}
-
 
 .navbar-close-open{z-index: 10;
     /* position: relative; */
@@ -225,7 +219,7 @@ background-color:none;  // color:D72436;
   position: absolute;
   height: 4px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.68);
+  background:rgba(79, 155, 191, 0.88);
   border-radius: 9px;
   opacity: 1;
   left: 0;

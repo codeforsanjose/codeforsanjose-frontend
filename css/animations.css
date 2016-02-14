@@ -4,6 +4,10 @@ Because we all need some Sass in our lives. And in our codes.
 This code will subtly (or not so subtly) generate different colors for background.
 This code will also do some animations for header. 
 */
+/* Color Changer Animation: Color Variables. Pick your poison! 
+*/
+/* $colors:transparentize($color,0.4)
+*/
 @keyframes changecolours {
   0% {
     background-color: rgba(236, 236, 236, 0.6); }
@@ -38,6 +42,8 @@ This code will also do some animations for header.
   100% {
     background-color: #ececec; } }
 
+/* Arrow Bounce Animation: 
+*/
 @keyframes bounceDown {
   0% {
     transform: translateY(0%); }
@@ -46,6 +52,8 @@ This code will also do some animations for header.
   100% {
     transform: translateY(0%); } }
 
+/*Animation Arrow Hover:
+*/
 @keyframes arrowHover {}.home-container .row {
   animation-name: changecolours;
   animation-duration: 20s;
