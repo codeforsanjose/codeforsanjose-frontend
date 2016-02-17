@@ -9,27 +9,47 @@ app.config(['$urlRouterProvider','$stateProvider', function($urlRouterProvider, 
 			templateUrl: 'templates/home.html'
 		})
 		.state('about', {
-			url:'/',
+			url:'/about',
 			templateUrl:'templates/about.html'
 		})
 		.state('projects', {
-			url:'/',
+			url:'/projects',
 			templateUrl:'templates/projects.html'
 		})
 		.state('data', {
-			url:'/',
-			templateUrl:'templates/data.html'
+			url:'/data',
+			templateUrl:'templates/data.html',
+			controller:'test'
 		})
 		.state('contact', {
-			url:'/',
+			url:'/contact',
 			templateUrl:'templates/contact.html'
 		})
-		.state('sign-up', {
-			url:'/',
-			templateUrl:'templates/sign-up.html'
+		.state('register', {
+			url:'/register',
+			templateUrl:'templates/register.html',
+			controller:'register'
+
+		})
+		.state('login', {
+			url:'/login',
+			templateUrl:'templates/login.html',
+			controller:'login'
+
 		});
 }]);
 
+app.controller('test', ['$scope',function($scope){
+	$scope.message="welcome";
+}]);
+
+app.controller('login', ['$scope',function($scope){
+	$scope.message="Welcome!";
+}]);
+
+app.controller('register', ['$scope',function($scope){
+	$scope.messag="Welcome!";
+}]);
 
 /* Home Page Controller --- Controller for information box on homepage. 
 Dynamically generates the next panel's JSON object with arrow click. */
@@ -39,8 +59,8 @@ app.controller('homeCtrl', function($scope){
 	$scope.panels=[
 		{
 			title:"About",
-			description:"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
-			modescription:"Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum",
+			modescription:"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
+			description:"Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum",
 			panelclass:"panel--about",
 		},
 		{
@@ -58,22 +78,14 @@ app.controller('homeCtrl', function($scope){
 		$scope.current=($scope.current + 1) % $scope.panels.length;
 	};
 
-	$scope.random=function(){
-		$(function () {
-            // wait till load event fires so all resources are available
-              $scope.$slider = $('#slider').css("color","red");
-              })
-    };
 
+    /* Hamburger Menu */
    $scope.navClass=function(){
 	   $(function() {
-			
-				$('#nav-icon').toggleClass('open');
-				$('.nav-area').toggleClass('vanish')
-			
+			$('#nav-icon').toggleClass('open');
+			$('.nav-area').toggleClass('vanish')
 		});
 	}
-
 	
 });
 	

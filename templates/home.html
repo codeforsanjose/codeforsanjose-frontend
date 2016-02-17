@@ -2,23 +2,30 @@
 	<div class="row panel {{panels[current].panelclass}}">
 		<div class="col-sm-12">
 			<div class="panel-filter">
-				<div class="info-box">
+				<div class="info-box" style="display:none">
 					<div class="blurred">
-						<div class="active cfsj-logo" ui-sref-active="active">
-	         				<a href="#" style="padding:0">
-	            			<img class="img-logo" style="width:100px" src="images/c4sjlogo.jpg">
-	          			</a>
-	        		</div>
-					<div class="up-arrow" ng-click="random()">
+						<div class="row">
+							<div class="active cfsj-logo" ui-sref-active="active">
+		         				<a href="#" style="padding:0"><img class="img-logo" style="width:100px" src="images/c4sjlogo.jpg"></a>
+		        			</div>
+
+	        			</div>
+					<!-- <div class="up-arrow" ng-click="random()">
 						<i class="fa fa-arrow-up"></i>
+					</div> -->
+					<div class="row" style="text-align:center">
+						<h2 id="slider">{{panels[current].title}}</h2>
+						<div class="col-lg-4 col-md-4" style="float:left; text-align:right">
+							<p>{{panels[current].description}}</p>
+						</div>
+						<div class="col-lg-8 col-md-8" style="float:left; text-align:left">
+							<p>{{panels[current].modescription}}</p>
+							<p>{{panels[current].modescription}}</p>
+						</div>
 					</div>
-					<h1 id="slider">{{panels[current].title}}</h1>
-					<p>{{panels[current].description}}</p>
-					<a href=""> Round Button - Read More...</a>
-					<p>{{panels[current].modescription}}</p>
-					<div class="down-arrow" ng-click="likesOne()">
+					<!-- <div class="down-arrow" ng-click="likesOne()">
 						<i class="fa fa-arrow-down"></i>
-					</div>
+					</div> -->
 
 					</div>
 				</div>

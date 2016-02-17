@@ -97,14 +97,6 @@
 
 /* NAVIGATION BAR RULES ARE HERE. NAVIGATION ANIMATIONS HERE AS WELL. 
 CODE REFACTORING HAPPENS LATER. */
-/*.arrow-down {
-    width: 0; 
-    height: 0; 
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    
-    border-top: 20px solid #f00;
-}*/
 .srow {
   font-size: 25px; }
 
