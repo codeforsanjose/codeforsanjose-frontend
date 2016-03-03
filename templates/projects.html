@@ -1,6 +1,6 @@
 
-<div ng-controller="projectsCtrl" class="container" style="width:100%;">
-  <div class="row" style="margin:0; overflow-y:scroll">
+<div ng-controller="projectsCtrl" class="container sub-page" style="width:100%;">
+  <div class="row" style="margin:0">
   <uib-tabset vertical="true" class="tabs-left" >
     <uib-tab ng-repeat="project in projects" heading="{{project.name}}" active="tab.active" disable="tab.disabled">
       <ul class="{{project.id}} content-list" >

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700,900);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,900);
 .tab-content {
@@ -424,6 +425,149 @@ CODE REFACTORING HAPPENS LATER. */
   height: 100%;
   margin: 0; }
 
+.contact-container iframe#map {
+  height: 100vh;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.contact-form {
+  z-index: 1;
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  padding: 30px 55px 30px 55px;
+  width: 630px;
+  margin: auto;
+  background-color: white;
+  border: 1px solid #e1e1e1;
+  -moz-box-shadow: 0px 0px 8px #444;
+  -webkit-box-shadow: 0px 0px 8px #444; }
+  .contact-form h1 {
+    text-align: center;
+    letter-spacing: 0.25em;
+    /*		color:rgba(167, 119, 187, 1);
+*/ }
+
+.social-icons {
+  text-align: center;
+  padding: 20px 5px 10px 5px;
+  margin: 15px 0 35px 0; }
+  .social-icons .calendar:before {
+    font-family: FontAwesome;
+    border-top: 4px solid #B3805B;
+    color: #B3805B;
+    content: "";
+    padding: 5px;
+    margin: 10px 33px 35px 33px;
+    font-size: 23px;
+    display: inline-block;
+    cursor: pointer; }
+  .social-icons .location:before {
+    font-family: FontAwesome;
+    border-top: 4px solid #45C09C;
+    color: #45C09C;
+    content: "";
+    padding: 5px;
+    margin: 10px 33px 35px 33px;
+    font-size: 23px;
+    display: inline-block;
+    cursor: pointer; }
+  .social-icons .facebook:before {
+    font-family: FontAwesome;
+    border-top: 4px solid #43609C;
+    color: #43609C;
+    content: "";
+    padding: 5px;
+    margin: 10px 33px 35px 33px;
+    font-size: 23px;
+    display: inline-block;
+    cursor: pointer; }
+  .social-icons .twitter:before {
+    font-family: FontAwesome;
+    border-top: 4px solid #1DA1F2;
+    color: #1DA1F2;
+    content: "";
+    padding: 5px;
+    margin: 10px 33px 35px 33px;
+    font-size: 23px;
+    display: inline-block;
+    cursor: pointer; }
+  .social-icons .github:before {
+    font-family: FontAwesome;
+    border-top: 4px solid #C2185B;
+    color: #C2185B;
+    content: "";
+    padding: 5px;
+    margin: 10px 33px 35px 33px;
+    font-size: 23px;
+    display: inline-block;
+    cursor: pointer; }
+
+.contact-form .form-control {
+  background-color: rgba(167, 119, 187, 0.53); }
+
+form, .form-control {
+  font-size: 14px; }
+
+label {
+  text-align: right;
+  color: #445668;
+  text-transform: uppercase; }
+
+input {
+  width: 260px;
+  height: 35px;
+  padding: 5px 20px 0px 20px;
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-family: sans-serif;
+  text-shadow: 0px -1px 0px #334f71; }
+
+input::-webkit-input-placeholder {
+  /*color: #a1b2c3; text-shadow: 0px -1px 0px #38506b;  */ }
+
+input:-moz-placeholder {
+  color: #a1b2c3;
+  /*text-shadow: 0px -1px 0px #38506b;*/ }
+
+.btn-primary,
+.btn-primary:focus,
+.btn-primary:hover {
+  background-color: #555; }
+
+textarea {
+  width: 260px;
+  max-width: 100%;
+  height: 170px;
+  padding: 12px 20px 0px 20px;
+  margin: 0 0 10px 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #f2f2f2;
+  text-shadow: 0px -1px 0px #334f71; }
+
+textarea::-webkit-input-placeholder {
+  color: #a1b2c3; }
+
+textarea:-moz-placeholder {
+  color: #a1b2c3; }
+
+input[type=submit] {
+  /*width: 185px; height: 52px; padding: 10px 15px; margin: 0 15px 0 0;*/
+  width: 100px;
+  margin-right: 0;
+  border-radius: 2px;
+  /*	-moz-box-shadow: 0px 0px 5px #999;-webkit-box-shadow: 0px 0px 5px #999;
+*/
+  border: 1px solid #556f8c;
+  /*background: -moz-linear-gradient(top, #718DA9 0%, #415D79 100%);*/
+  /* firefox */
+  /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#718DA9), color-stop(100%,#415D79));*/
+  /* webkit */
+  cursor: pointer; }
+
 /*html, body{    max-height: 100%;
     max-width: 100%;
     height: 100%;
@@ -503,3 +647,16 @@ body {
 
 .navbar a i:hover, .navbar a i:active, .navbar a i.fa {
   display: inline-block; }
+
+.registercontainer {
+  padding-top: 500px 0 0 0;
+  background: #ECE9E6;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #ECE9E6, #FFFFFF);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #ECE9E6, #FFFFFF);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+@media screen and (max-width: 700px) {
+  .sub-page {
+    padding-top: 80px; } }
